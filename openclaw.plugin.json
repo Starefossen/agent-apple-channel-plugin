@@ -1,0 +1,28 @@
+{
+  "id": "openclaw-apple-mail",
+  "name": "Apple Mail",
+  "description": "Apple Mail channel plugin — receive and process emails from allowed senders via Mail.app on macOS",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "description": "Whether the Apple Mail channel is active"
+      },
+      "dbPath": {
+        "type": "string",
+        "description": "Path to Apple Mail Envelope Index SQLite database"
+      },
+      "pollIntervalMs": {
+        "type": "number",
+        "description": "How often to poll for new messages (milliseconds)"
+      },
+      "allowFrom": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Email addresses allowed to send messages to the agent"
+      }
+    },
+    "additionalProperties": false
+  }
+}

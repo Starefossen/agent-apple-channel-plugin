@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "allowFrom": [
+    "hans@flaatten.org"
+  ],
+  "pollIntervalMs": 30000
+}

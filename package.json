@@ -1,0 +1,40 @@
+{
+  "name": "openclaw-apple-mail",
+  "version": "0.1.0",
+  "description": "Apple Mail channel plugin for OpenClaw — receive and process emails from allowed senders via Mail.app on macOS",
+  "type": "module",
+  "main": "dist/index.js",
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "channel": {
+      "id": "apple-mail",
+      "label": "Apple Mail",
+      "selectionLabel": "Apple Mail (macOS)",
+      "docsPath": "/channels/apple-mail",
+      "docsLabel": "apple-mail",
+      "blurb": "Receive emails via Apple Mail.app on macOS. Polls the local Mail database for new messages from allowed senders.",
+      "order": 45,
+      "quickstartAllowFrom": true
+    }
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "license": "MIT"
+}
