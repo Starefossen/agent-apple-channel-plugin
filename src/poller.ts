@@ -148,8 +148,8 @@ export class MailPoller {
     try {
       const body = await this.client.fetchBody(envelope);
       const message: MailMessage = { ...envelope, body };
-      await this.delegate.onMessage(message);
       await this.client.markAsRead(envelope);
+      await this.delegate.onMessage(message);
     } catch (err) {
       this.delegate.onError(
         err instanceof Error ? err : new Error(String(err)),
