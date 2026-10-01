@@ -36,10 +36,5 @@
   "os": [
     "darwin"
   ],
-  "license": "MIT",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  }
+  "license": "MIT"
 }
