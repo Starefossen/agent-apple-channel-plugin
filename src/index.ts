@@ -148,6 +148,7 @@ function createPlugin() {
     },
 
     capabilities: {
+      chatTypes: ["direct"],
       dm: true,
       group: false,
       media: false,
